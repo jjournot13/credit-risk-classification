@@ -2,26 +2,39 @@
 
 ## Overview of the Analysis
 
-In this section, describe the analysis you completed for the machine learning models used in this Challenge. This might include:
+The purpose of this project is to build a model that can identify the creditworthiness of borrowers. The dataset used includes historical lending activity from a peer-to-peer lending services company.
 
-* Explain the purpose of the analysis.
-* Explain what financial information the data was on, and what you needed to predict.
-* Provide basic information about the variables you were trying to predict (e.g., `value_counts`).
-* Describe the stages of the machine learning process you went through as part of this analysis.
-* Briefly touch on any methods you used (e.g., `LogisticRegression`, or any other algorithms).
+The dataset included 77,536 entries (75,036 healthy loans and 2,500 high-risk loans) with the following information:
+- loan size
+- interest rate
+- borrower income
+- debt to income ratio
+- number of credit accounts
+- number of deraogatory marks
+- total debt
+- current loan status
+
+The target financial information used was loan status (label) and the remaining factors were used as features for the model.
+
+The following steps were used for the machine learning process:
+1. Created label and features sets.
+1. Split the data into training and testing datasets by using train_test_split.
+1. Created a Logistic Regression Model with the data.
+1. Saved the predictions on the testing data labels and the fitted model.
+1. Evaluated the model’s performance by generating a confusion matrix and classification report.
 
 ## Results
 
 Using bulleted lists, describe the accuracy scores and the precision and recall scores of all machine learning models.
 
-* Machine Learning Model 1:
-    * Description of Model 1 Accuracy, Precision, and Recall scores.
+Machine Learning Model - Logistic Regression
+
+- Accuracy: 99%
+- Precision: 100% for healthy loans/85% for high-risk loans
+- Recall: 99% for healthy loans/91% for high-risk loans
 
 ## Summary
 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
+Based on the accuracy, precision and recall scores, the model appears to do well in predicting the health or risk of a loan, with healthy loans having more higher scores. However, it should be noted that the data is imbalanced with healthy loans having a significantly larger representation (75,036 entries versus 2,500), which likely skewed the results.
 
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
-
-If you do not recommend any of the models, please justify your reasoning.
+While this model should work for the company, I would like to either have a more balanced dataset to test in this model or use another model that can produce a more balanced comparison before making a recommendation.
