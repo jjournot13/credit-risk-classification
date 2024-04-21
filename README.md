@@ -10,7 +10,7 @@ The dataset included 77,536 entries (75,036 healthy loans and 2,500 high-risk lo
 - borrower income
 - debt to income ratio
 - number of credit accounts
-- number of deraogatory marks
+- number of derogatory marks
 - total debt
 - current loan status
 
@@ -25,8 +25,6 @@ The following steps were used for the machine learning process:
 
 ## Results
 
-Using bulleted lists, describe the accuracy scores and the precision and recall scores of all machine learning models.
-
 Machine Learning Model - Logistic Regression
 
 - Accuracy: 99%
@@ -35,6 +33,6 @@ Machine Learning Model - Logistic Regression
 
 ## Summary
 
-Based on the accuracy, precision and recall scores, the model appears to do well in predicting the health or risk of a loan, with healthy loans having more higher scores. However, it should be noted that the data is imbalanced with healthy loans having a significantly larger representation (75,036 entries versus 2,500), which likely skewed the results.
+Based on the accuracy, precision and recall scores, the model appears to do well in predicting the health or risk of a loan, with healthy loans having higher scores. However, it should be noted that the data is imbalanced with healthy loans having a significantly larger representation (75,036 entries versus 2,500), which likely skewed the results.
 
 While this model should work for the company, I would like to either have a more balanced dataset to test in this model or use another model that can produce a more balanced comparison before making a recommendation.
